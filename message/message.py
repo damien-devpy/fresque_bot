@@ -14,3 +14,4 @@ class Message:
 
     def _format_counter(self, counter):
         return "{:,}".format(int(counter)).replace(",", " ")
+

@@ -1,22 +1,17 @@
 
 class Message:
-    """Comptute pre registered message with inputs"""
+    """Compute pre registered message with inputs"""
 
-    MESSAGE = """
-    {counter}.
-    
-    C'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!
-    
-    Faites grimper le compteur !
-    
-    Inscrivez-vous à une Fresque du Climat: https://fresqueduclimat.org/dates-demos/
-    Formez-vous à l'animation: https://fresqueduclimat.org/dates-formations/
-    """
+    MESSAGE = "{counter}.\n\nC'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇 https://tinyurl.com/2zp9938a"
 
     def __init__(self, counter):
         
-        self.counter = counter.counter
         self.message = None
+        self.counter = self._format_counter(counter.counter)
 
     def compute_message(self):
         self.message = self.MESSAGE.format(counter=self.counter)
+
+    def _format_counter(self, counter):
+        return "{:,}".format(int(counter)).replace(",", " ")
+

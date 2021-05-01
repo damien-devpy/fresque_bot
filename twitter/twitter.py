@@ -18,7 +18,7 @@ class Twitter:
         self._access_token = environ.get("ACCESS_TOKEN")
         self._access_token_secret = environ.get("ACCESS_TOKEN_SECRET")
 
-        self.message = message
+        self.message = message.message
         self.api = self._build_api()
 
     def tweet(self):

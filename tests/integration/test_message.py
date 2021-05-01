@@ -7,14 +7,5 @@ def test_that_message_compute_with_counter_input(content):
     counter.extract_counter()
     message = Message(counter)
     message.compute_message()
-
-    assert message.message == f"""
-    {counter.counter}.
-    
-    C'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!
-    
-    Faites grimper le compteur !
-    
-    Inscrivez-vous à une Fresque du Climat: https://fresqueduclimat.org/dates-demos/
-    Formez-vous à l'animation: https://fresqueduclimat.org/dates-formations/
-    """
+    counter = "{:,}".format(int(counter.counter)).replace(",", " ")
+    assert message.message == f"{counter}.\n\nC'est le nombre de personnes sensibilisées par FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇 https://tinyurl.com/2zp9938a"

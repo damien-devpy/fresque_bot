@@ -2,6 +2,7 @@ from datetime import datetime
 from os import environ
 
 import requests
+
 from counter.counter import Counter
 from database.models import CounterTable
 from database.session import session

@@ -8,10 +8,10 @@ class Twitter:
 
     def __init__(self, message):
         """Create a Twitter object.
-        
+
         self.message (string): message to tweet
         self.api (Twitter API object): Manage Twitter API
-        
+
         """
         self._consumer_key = environ.get("CONSUMER_KEY")
         self._consumer_secret = environ.get("CONSUMER_SECRET")

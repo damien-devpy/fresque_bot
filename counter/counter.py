@@ -8,7 +8,7 @@ from .missingcounterexception import MissingCounterException
 class Counter:
     """Counter object used to extract the number of person reached from an HTML body."""
 
-    REGEX = r'(?P<participants>participants[#,:\\\w]*rows[\\\w:]*(?P<number>[0-9]{6,}))'
+    REGEX = r"(?P<participants>participants[#,:\\\w]*rows[\\\w:]*(?P<number>[0-9]{6,}))"
 
     def __init__(self, content):
         """Create a Counter object in order to extract the count.
@@ -20,7 +20,6 @@ class Counter:
 
         self.content = self._extract_javascript(content)
         self.counter = None
-
 
     def extract_counter(self):
         """Extract the counter from the obsfucated javascript."""
@@ -39,6 +38,8 @@ class Counter:
         """
 
         content_as_html = fromstring(content)
-        js = content_as_html.xpath("//div[@id='embed_chart']//following-sibling::script[2]")[0]
+        js = content_as_html.xpath(
+            "//div[@id='embed_chart']//following-sibling::script[2]"
+        )[0]
 
         return js.text

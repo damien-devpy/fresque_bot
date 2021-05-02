@@ -5,7 +5,7 @@ Base = declarative_base()
 
 
 class CounterTable(Base):
-    __tablename__ = 'counter'
+    __tablename__ = "counter"
 
     id = Column(Integer, primary_key=True)
     counter = Column(BigInteger)

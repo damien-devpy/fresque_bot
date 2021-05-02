@@ -8,5 +8,7 @@ DB_PASSWORD = quote_plus(environ.get("DATABASE_PASSWORD"))
 DB_USER = environ.get("DATABASE_USER")
 DB_NAME = environ.get("DATABASE_NAME")
 
-engine = create_engine(f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@localhost/{DB_NAME}")
+engine = create_engine(
+    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@localhost/{DB_NAME}"
+)
 session = Session(engine)

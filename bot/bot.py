@@ -21,7 +21,7 @@ class Bot:
 
         self.counter (Counter object): An object containing the animation counter
         self.message (Message object): Message object computing pre registered message with counter
-        self.twitter (Twitter API)
+        self.twitter (Twitter object)
         """
 
         self.counter = self._set_counter()

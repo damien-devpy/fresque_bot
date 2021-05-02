@@ -2,7 +2,6 @@ from datetime import datetime
 from os import environ
 
 import requests
-
 from counter.counter import Counter
 from database.models import CounterTable
 from database.session import session
@@ -22,7 +21,7 @@ class Bot:
 
         self.counter (Counter object): An object containing the animation counter
         self.message (Message object): Message object computing pre registered message with counter
-        self.twitter (Twitter API)
+        self.twitter (Twitter object)
         """
 
         self.counter = self._set_counter()

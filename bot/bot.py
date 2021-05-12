@@ -29,7 +29,7 @@ class Bot:
         self.twitter = self._set_twitter()
 
     def tweet(self):
-        self._tweet()
+        self.twitter.tweet()
 
     def _set_counter(self):
         response = requests.get(environ.get("URL"))
@@ -51,6 +51,3 @@ class Bot:
     def _set_twitter(self):
         twitter = Twitter(self.message)
         return twitter
-
-    def _tweet(self):
-        self.twitter.tweet()

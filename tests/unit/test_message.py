@@ -17,5 +17,6 @@ def test_that_message_compute_with_input():
 
     assert (
         message.message
-        == "42.\n\nC'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇\n#FresqueDuClimat #ClimateCollage #GIEC #ClimateEducation https://tinyurl.com/2zp9938a"  # noqa: W503
+        == "42.\n\nC'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇\n#FresqueDuClimat #GIEC https://tinyurl.com/57rd8eer" #noqa: W503
     )
+

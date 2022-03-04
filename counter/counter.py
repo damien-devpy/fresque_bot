@@ -13,4 +13,4 @@ class Counter:
         self.counter = self.extract_counter()
 
     def extract_counter(self):
-        return self.content['data']['rows'][0][0]
+        return self.content["data"]["rows"][0][0]

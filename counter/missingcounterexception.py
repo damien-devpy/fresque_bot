@@ -1,2 +1,0 @@
-class MissingCounterException(Exception):
-    pass

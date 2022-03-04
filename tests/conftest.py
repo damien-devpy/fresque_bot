@@ -1,6 +1,6 @@
+import json
 from os import environ
 
-import json
 import pytest
 import requests
 
@@ -14,7 +14,8 @@ def response():
 
 @pytest.fixture
 def content():
-    return json.loads("""{
+    return json.loads(
+        """{
         "data": {
             "rows": [
                 [327342]
@@ -22,9 +23,10 @@ def content():
             "cols": [
                 {
                     "base_type": "type/BigInteger","semantic_type":"type/Quantity","settings":null,"name":"sum","display_name":"Somme de Participants Number","source":"aggregation","field_ref":["aggregation",0],"effective_type":"type/BigInteger"}],"insights":null,"results_timezone":"Etc/UTC"},
-"json_query":{},"status":"completed"}""")
+"json_query":{},"status":"completed"}"""
+    )
 
 
 @pytest.fixture
 def wrong_content():
-    return {'not_the_expected_content': ''}
+    return {"not_the_expected_content": ""}

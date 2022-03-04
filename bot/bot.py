@@ -1,7 +1,7 @@
-from datetime import datetime
 from os import environ
 
 import requests
+
 from counter.counter import Counter
 from message.message import Message
 from twitter.twitter import Twitter

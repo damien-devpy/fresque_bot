@@ -1,7 +1,7 @@
 class Message:
     """Compute pre registered message with inputs"""
 
-    MESSAGE = "{counter}.\n\nC'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇\n#FresqueDuClimat #GIEC https://tinyurl.com/57rd8eer"
+    MESSAGE = "{counter}.\n\nC'est le nombre de personnes sensibilisées par @FresqueDuClimat entre 2018 et aujourd'hui!\n\nFaites grimper le compteur !\n\nInscrivez-vous à une Fresque du Climat 👇\n#FresqueDuClimat #GIEC https://t.co/QmjokQpPnA"
 
     def __init__(self, counter):
 
